@@ -26,4 +26,11 @@ describe Artist do
     expect(test_artist.save).to eq [test_artist]
   end
   
+  it 'adds a work to a specific artist' do
+    test_artist = Artist.new({'name' => 'Mary Cassatt', 'style' => 'Impressionism'})
+    test_work = Work.new({'name' => 'Summertime', 'year' => '1894'})
+    test_artist.add_work(test_work)
+    expect(test_artist.works).to eq [test_work]
+  end
+  
 end

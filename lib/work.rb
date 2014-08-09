@@ -17,4 +17,5 @@ class Work
     @@all_works << self 
   end
   
+  
 end

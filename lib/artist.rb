@@ -10,7 +10,7 @@ class Artist
   end
 
   def Artist.all
-    @@all_artists  
+    @@all_artists = []  
   end
   
   def save

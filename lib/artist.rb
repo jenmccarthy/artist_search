@@ -14,6 +14,10 @@ class Artist
     @@all_artists = []  
   end
   
+  def search
+    self.works
+  end
+  
   def save
     @@all_artists << self
   end

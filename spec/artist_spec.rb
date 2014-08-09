@@ -33,4 +33,14 @@ describe Artist do
     expect(test_artist.works).to eq [test_work]
   end
   
+  it 'searches an artist to return his/her works' do
+    test_artist = Artist.new({'name' => 'Mary Cassatt', 'style' => 'Impressionism'})
+    test_artist.save
+    test_work = Work.new({'name' => 'Summertime', 'year' => '1894'})
+    test_artist.add_work(test_work)
+    another_test_work = Work.new({'name' => 'At The Theater', 'year' => '1880'})
+    test_artist.add_work(another_test_work)
+    expect(test_artist.search).to eq [test_work, another_test_work]
+  end
+  
 end

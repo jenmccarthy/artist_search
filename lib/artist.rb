@@ -7,4 +7,8 @@ class Artist
     @style = attributes['style']
   end
 
+  def self.all
+    []  
+  end
+  
 end

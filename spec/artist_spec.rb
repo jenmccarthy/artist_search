@@ -14,4 +14,8 @@ describe Artist do
     expect(test_artist.style).to eq 'Impressionism'
   end
   
+  it 'provides a place to hold all artists' do
+    expect(Artist.all).to eq []
+  end
+  
 end

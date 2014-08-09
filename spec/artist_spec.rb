@@ -18,4 +18,9 @@ describe Artist do
     expect(Artist.all).to eq []
   end
   
+  it 'saves artist information into the collection' do
+    test_artist = Artist.new({'name' => 'Mary Cassatt', 'style' => 'Impressionism'})
+    expect(test_artist.save).to eq [test_artist]
+  end
+  
 end

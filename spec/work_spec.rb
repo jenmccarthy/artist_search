@@ -21,4 +21,9 @@ describe Work do
     expect(test_work.year).to eq '1894'
   end
   
+  it 'will save artists works' do
+    test_work = Work.new({'name' => 'Summertime', 'year' => '1894'})
+    expect(test_work.save).to eq [test_work]
+  end
+  
 end

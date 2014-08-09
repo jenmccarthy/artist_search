@@ -2,7 +2,7 @@ class Artist
   
   attr_reader(:name, :style)
   
-  @@all_artists = []
+  @@all_artists 
   
   def initialize(attributes)
     @name = attributes['name']

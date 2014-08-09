@@ -7,6 +7,10 @@ class Work
     @year = attributes['year']
   end
   
+  def Work.all
+    []
+  end
+  
 
 
 end

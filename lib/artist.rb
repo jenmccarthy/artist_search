@@ -1,8 +1,8 @@
 class Artist
   
-  attr_reader(:name, :style, :works)
+  attr_reader(:name, :style, :works, :all_artists)
   
-  @@all_artists 
+  @@all_artists = []
   
   def initialize(attributes)
     @name = attributes['name']
@@ -11,7 +11,11 @@ class Artist
   end
 
   def Artist.all
-    @@all_artists = []  
+    @@all_artists   
+  end
+  
+  def Artist.clear
+    @@all_artists = []
   end
   
   def search

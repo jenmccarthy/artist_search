@@ -4,6 +4,10 @@ require 'work.rb'
 
 describe Artist do
   
+  before do
+    Artist.clear
+  end
+  
   describe Artist.all do
     it 'provides a place to hold all artist objects' do
       expect(Artist.all).to eq []
